@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.tarea_clase11.controller.LoginController"
+            prefHeight="500"
+            prefWidth="700"
+            stylesheets="@estilos.css">
+
+    <children>
+
+        <VBox spacing="15"
+              alignment="CENTER"
+              prefWidth="320"
+              prefHeight="430"
+              layoutX="190"
+              layoutY="35"
+              styleClass="login-card">
+
+            <padding>
+                <Insets top="25" right="25" bottom="25" left="25"/>
+            </padding>
+
+            <Label text="MiTienda"
+                   styleClass="titulo"/>
+
+            <Label text="Sistema de Ventas"
+                   styleClass="subtitulo"/>
+
+            <Region prefHeight="15"/>
+
+            <Label text="Iniciar sesión"
+                   styleClass="login-title"/>
+
+            <TextField
+                    fx:id="txtUsuario"
+                    promptText="Ej: admin"/>
+
+            <PasswordField
+                    fx:id="txtPassword"
+                    promptText="Contraseña"/>
+
+            <ComboBox
+                    fx:id="cbRol"
+                    promptText="Seleccionar Rol"/>
+
+            <Button text="Ingresar"
+                    styleClass="btn-login"
+                    onAction="#ingresar"/>
+
+            <Label text="admin / 1234"
+                   styleClass="footer-login"/>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

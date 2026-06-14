@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.tarea_clase11.controller.DashboardController"
+            stylesheets="@estilos.css">
+
+    <left>
+
+        <VBox prefWidth="220"
+              styleClass="sidebar">
+
+            <Label text="MiTienda"
+                   styleClass="logo"/>
+
+            <Separator/>
+
+            <VBox spacing="5">
+
+                <Label fx:id="lblUsuario"
+                       styleClass="user-name"/>
+
+                <Label fx:id="lblRol"
+                       styleClass="user-role"/>
+
+            </VBox>
+
+            <Separator/>
+
+            <Button text="Inicio"/>
+            <Button text="Productos"/>
+            <Button text="Categorías"/>
+            <Button text="Clientes"/>
+            <Button text="Ventas"/>
+            <Button text="Reportes"/>
+            <Button text="Usuarios"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <Button text="Cerrar sesión"/>
+
+        </VBox>
+
+    </left>
+
+    <center>
+
+        <VBox spacing="15" styleClass="contenido">
+
+            <Label text="Registro / Edición de Producto"
+                   styleClass="section-title"/>
+
+            <GridPane hgap="15"
+                      vgap="15">
+
+                <Label text="Código"/>
+                <TextField fx:id="txtCodigo"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Nombre"
+                       GridPane.columnIndex="2"/>
+
+                <TextField fx:id="txtNombre"
+                           GridPane.columnIndex="3"/>
+
+                <Label text="Categoría"
+                       GridPane.columnIndex="4"/>
+
+                <ComboBox fx:id="cbCategoria"
+                          GridPane.columnIndex="5"/>
+
+                <Label text="Precio"
+                       GridPane.rowIndex="1"/>
+
+                <TextField fx:id="txtPrecio"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="1"/>
+
+                <Label text="Stock"
+                       GridPane.columnIndex="2"
+                       GridPane.rowIndex="1"/>
+
+                <TextField fx:id="txtStock"
+                           GridPane.columnIndex="3"
+                           GridPane.rowIndex="1"/>
+
+                <Label text="Estado"
+                       GridPane.columnIndex="4"
+                       GridPane.rowIndex="1"/>
+
+                <ComboBox fx:id="cbEstado"
+                          GridPane.columnIndex="5"
+                          GridPane.rowIndex="1"/>
+
+            </GridPane>
+
+            <HBox spacing="10">
+
+                <Button text="Nuevo"
+                        onAction="#nuevo"/>
+
+                <Button text="Guardar"
+                        onAction="#guardar"/>
+
+                <Button text="Actualizar"
+                        onAction="#actualizar"/>
+
+                <Button text="Eliminar"
+                        onAction="#eliminar"/>
+
+                <Button text="Limpiar"
+                        onAction="#limpiar"/>
+
+            </HBox>
+
+            <HBox spacing="10">
+
+                <Label text="Buscar:"/>
+
+                <TextField fx:id="txtBuscar"
+                           prefWidth="250"/>
+
+            </HBox>
+
+            <TableView fx:id="tablaProductos"
+                       VBox.vgrow="ALWAYS">
+
+                <columns>
+
+                    <TableColumn
+                            fx:id="colCodigo"
+                            text="Código"
+                            prefWidth="100"/>
+
+                    <TableColumn
+                            fx:id="colNombre"
+                            text="Nombre"
+                            prefWidth="180"/>
+
+                    <TableColumn
+                            fx:id="colCategoria"
+                            text="Categoría"
+                            prefWidth="120"/>
+
+                    <TableColumn
+                            fx:id="colPrecio"
+                            text="Precio"
+                            prefWidth="100"/>
+
+                    <TableColumn
+                            fx:id="colStock"
+                            text="Stock"
+                            prefWidth="80"/>
+
+                    <TableColumn
+                            fx:id="colEstado"
+                            text="Estado"
+                            prefWidth="120"/>
+
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

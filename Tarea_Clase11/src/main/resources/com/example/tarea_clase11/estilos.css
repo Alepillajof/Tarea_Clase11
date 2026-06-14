@@ -1,0 +1,84 @@
+.root{
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #f5f6fa;
+}
+
+.login-card{
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #dfe6e9;
+}
+
+.titulo{
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.subtitulo{
+    -fx-text-fill: gray;
+}
+
+.login-title{
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.btn-login{
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-pref-width: 250;
+}
+
+.footer-login{
+    -fx-text-fill: #999;
+    -fx-font-size: 11px;
+}
+
+.sidebar{
+    -fx-background-color: linear-gradient(to bottom,#0f172a,#1e293b);
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+
+.sidebar .button{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+}
+
+.sidebar .button:hover{
+    -fx-background-color: #2563eb;
+}
+
+.logo{
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.user-name{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.user-role{
+    -fx-text-fill: #94a3b8;
+}
+
+.contenido{
+    -fx-padding: 20;
+}
+
+.section-title{
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.table-view{
+    -fx-background-color: white;
+}
+
+.button{
+    -fx-cursor: hand;
+}
